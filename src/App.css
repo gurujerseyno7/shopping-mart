@@ -87,7 +87,7 @@
     }
 
 .animate-category {
-  animation: scrolling 10s linear infinite;
+  animation: scrolling 20s linear infinite;
   will-change: transform;
 }
 .category-container:hover .animate-category{

@@ -30,7 +30,7 @@ const Footer = () => {
   return (
     <div className="bg-primary w-auto overflow-hidden max-h-auto ">
       <div className="flex flex-col justify-evenly pl-4 pt-4 py-2">
-        <div className="flex flex-col sm:flex-row gap-20 text-left ">
+        <div className="flex flex-col gap-5 sm:flex-row sm:gap-20 text-left ">
           <div className="flex flex-col gap-5">
             <div className="flex flex-col gap-1 items-start">
               <img
@@ -60,7 +60,7 @@ const Footer = () => {
             <hr className="h-0.5 w-full text-white " />
             <div className="flex flex-col items-start">
               {customerPolicyLinks?.map((link) => (
-                <span className="text-white text-md cursor-pointer" key={link}>
+                <span className="text-white text-sm cursor-pointer" key={link}>
                   {link}
                 </span>
               ))}

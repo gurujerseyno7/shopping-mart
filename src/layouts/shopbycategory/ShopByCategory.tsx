@@ -3,7 +3,7 @@ import { shopByCategories } from "./datas/shopByCategoryDatas";
 
 const ShopByCategory = () => {
   const CategoryBatches = () => {
-    return shopByCategories?.map((category) => (
+    return [...shopByCategories, ...shopByCategories]?.map((category) => (
       <div className="p-2" key={category.categoryName}>
         <CategoryBatch {...category} />
       </div>
@@ -17,11 +17,8 @@ const ShopByCategory = () => {
         </h2>
         <hr className="h-0.5 w-full my-2 bg-secondary border-0" />
       </div>
-      <div className="category-container w-full overflow-hidden flex gap-45">
+      <div className="category-container w-full overflow-hidden flex lg:gap-45 sm:gap-96 ">
         <div className="flex w-full gap-10 animate-category">
-          <CategoryBatches />
-        </div>
-        <div aria-hidden className="flex w-full gap-10 animate-category">
           <CategoryBatches />
         </div>
       </div>
