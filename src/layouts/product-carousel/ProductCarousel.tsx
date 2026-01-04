@@ -20,7 +20,7 @@ const ProductCarousel = ({
   return (
     <div className="flex flex-col items-start relative overflow-hidden ">
       <div className="flex w-auto flex-col">
-        <h2 className="text-xl font-bold text-black uppercase">
+        <h2 className="text-xl! font-bold! text-black! uppercase!">
           {productTitle}
         </h2>
         <hr className="h-0.5 w-full my-2 bg-secondary border-0" />
@@ -42,12 +42,14 @@ const ProductCarousel = ({
           <IoIosArrowBack size={20} color={isStartScroll ? "grey" : "black"} />
         }
         className={`absolute top-50 z-20`}
-        onClick={() => {
+        onClick={(e: React.MouseEvent) => {
+          e.stopPropagation();
+          e.preventDefault();
           handleHorizontalScroll({
             element: productRef.current,
             speed: 25,
             distance: 100,
-            step: -50,
+            step: -10,
           });
         }}
       />
@@ -56,12 +58,14 @@ const ProductCarousel = ({
           <IoIosArrowForward size={20} color={isEndScroll ? "grey" : "black"} />
         }
         className="absolute top-50 right-0 z-20"
-        onClick={() => {
+        onClick={(e: React.MouseEvent) => {
+          e.stopPropagation();
+          e.preventDefault();
           handleHorizontalScroll({
             element: productRef.current,
             speed: 25,
             distance: 100,
-            step: 50,
+            step: 10,
           });
         }}
       />

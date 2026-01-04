@@ -24,9 +24,9 @@ const NavBar = () => {
             className="h-8 rounded object-cover"
           />
           <CustomSearch options={productListDropdown} />
-          <FaShoppingCart size={20} />
+          <FaShoppingCart size={20} className="text-white!" />
           <MdOutlineMenu
-            className="lg:hidden"
+            className="lg:hidden text-white"
             size={20}
             onClick={() => {
               setToggleMenu(!toggleMenu);

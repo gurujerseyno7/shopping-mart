@@ -17,6 +17,7 @@ const useHorizontalScroll = () => {
     let scrollAmount = 0;
 
     const slideTimer = setInterval(() => {
+      console.log("CALLINGS");
       element!.scrollLeft += step;
       scrollAmount += Math.abs(step);
       if (scrollAmount >= distance) {

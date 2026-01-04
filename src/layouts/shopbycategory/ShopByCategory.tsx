@@ -3,11 +3,13 @@ import { shopByCategories } from "./datas/shopByCategoryDatas";
 
 const ShopByCategory = () => {
   const CategoryBatches = () => {
-    return [...shopByCategories, ...shopByCategories]?.map((category) => (
-      <div className="p-2" key={category.categoryName}>
-        <CategoryBatch {...category} />
-      </div>
-    ));
+    return [...shopByCategories, ...shopByCategories]?.map(
+      (category, index) => (
+        <div className="p-2" key={index}>
+          <CategoryBatch {...category} />
+        </div>
+      )
+    );
   };
   return (
     <div className="flex flex-col items-start p-2 bg-tertiary">

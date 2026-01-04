@@ -5,7 +5,7 @@ import type { PrimitiveTypes } from "../../../types/basicTypes";
 type ArrowButtonProps = {
   icon: ReactElement;
   className?: PrimitiveTypes["string"];
-  onClick: () => void;
+  onClick: (e: React.MouseEvent) => void;
 };
 
 export type { ArrowButtonProps };

@@ -2,6 +2,7 @@ import Logo from "../../assets/images/g-mart-logo.webp";
 import { FaInstagram } from "react-icons/fa6";
 import { FaFacebookF, FaWhatsapp } from "react-icons/fa";
 import SocialMediaButton from "./components/SocialMediaButton";
+import { constants } from "./utils/constants";
 
 const socialLinks = [
   {
@@ -39,10 +40,10 @@ const Footer = () => {
                 className="object-cover h-10 w-10 rounded-md"
               />
               <span className="text-white font-semibold text-sm">
-                Freshness delivered to your door.
+                {constants.footerSlogan1}
               </span>
               <span className="text-white font-semibold text-sm">
-                Quality you can taste everyday.
+                {constants.footerSlogan2}
               </span>
             </div>
             <div className="flex gap-2">
@@ -56,8 +57,10 @@ const Footer = () => {
             </div>
           </div>
           <div className="flex w-auto flex-col items-start">
-            <span className="text-xl font-bold">Customer Policy</span>
-            <hr className="h-0.5 w-full text-white " />
+            <span className="text-xl! font-bold!">
+              {constants.customerPolicy}
+            </span>
+            <hr className="h-0.5 w-full text-white" />
             <div className="flex flex-col items-start">
               {customerPolicyLinks?.map((link) => (
                 <span className="text-white text-sm cursor-pointer" key={link}>
@@ -67,28 +70,24 @@ const Footer = () => {
             </div>
           </div>
           <div className="flex w-auto flex-col items-start">
-            <span className="text-xl font-bold">Need Help</span>
+            <span className="text-xl! font-bold!">{constants.needHelp}</span>
             <hr className="h-0.5 w-full text-white " />
             <div className="flex flex-col items-start">
-              <span className="text-md font-bold">Email:</span>
-              <span className="text-sm">gmartsupport@gmail.com</span>
+              <span className="text-md font-bold">{constants.emailHeader}</span>
+              <span className="text-sm">{constants.emailId}</span>
             </div>
           </div>
           <div className="flex w-auto flex-col items-start">
-            <span className="text-xl font-bold">Address</span>
+            <span className="text-xl! font-bold!">{constants.address}</span>
             <hr className="h-0.5 w-full text-white " />
             <div className="flex flex-col items-start">
-              <span className="text-md">
-                5,Old Stabe Bank Colony,Tambaram Market.
-              </span>
-              <span className="text-md"> Tambaram-632919</span>
+              <span className="text-md">{constants.address1}</span>
+              <span className="text-md">{constants.address2}</span>
             </div>
           </div>
         </div>
         <hr className="h-0.5 w-auto text-gray-400 mt-5" />
-        <span className="text-sm text-left">
-          © 2026 Guru Mart. All rights reserved.
-        </span>
+        <span className="text-sm text-left">{constants.rights}</span>
       </div>
     </div>
   );

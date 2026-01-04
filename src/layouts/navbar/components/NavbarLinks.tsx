@@ -6,9 +6,12 @@ import classNames from "classnames";
 import { useNavBarLinkAction } from "../hooks/useNavBarLinkAction";
 
 const navBarLinks: NavBarLinkType[] = [
-  { label: "Home", icon: <IoHomeOutline size={20} /> },
-  { label: "Categories", icon: <BiCategory size={20} /> },
-  { label: "Login", icon: <IoMdContact size={20} /> },
+  { label: "Home", icon: <IoHomeOutline size={20} className="text-white!" /> },
+  {
+    label: "Categories",
+    icon: <BiCategory size={20} className="text-white!" />,
+  },
+  { label: "Login", icon: <IoMdContact size={20} className="text-white!" /> },
 ];
 
 const NavBarLinks = ({ toggleMenu }: NavBarLinkProps) => {
@@ -32,7 +35,7 @@ const NavBarLinks = ({ toggleMenu }: NavBarLinkProps) => {
           onClick={() => setActiveLink(label)}
         >
           {icon}
-          <span className="text-sm font-semibold">{label}</span>
+          <span className="text-sm font-semibold text-white!">{label}</span>
         </div>
       ))}
     </div>
