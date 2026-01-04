@@ -1,4 +1,4 @@
-name: DevOps-GitHibActions
+name: DevOps-GitHubActions
 on: push
 permissions:
   contents: read
