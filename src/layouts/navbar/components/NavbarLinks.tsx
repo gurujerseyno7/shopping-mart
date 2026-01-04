@@ -11,7 +11,7 @@ const navBarLinks: NavBarLinkType[] = [
   { label: "Login", icon: <IoMdContact size={20} /> },
 ];
 
-const NavBarLinks = ({ toggleMenu, setToggleMenu }: NavBarLinkProps) => {
+const NavBarLinks = ({ toggleMenu }: NavBarLinkProps) => {
   const { activeLink, setActiveLink } = useNavBarLinkAction();
 
   return (

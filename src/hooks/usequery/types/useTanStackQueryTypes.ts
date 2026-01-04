@@ -1,4 +1,4 @@
-import type { QueryFunction, QueryOptions } from "@tanstack/react-query";
+import type { QueryFunction } from "@tanstack/react-query";
 import type { PrimitiveTypes } from "../../../types/basicTypes";
 
 //type for useTanStackQueryHook arguments
