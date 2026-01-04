@@ -7,10 +7,6 @@ import { MdOutlineMenu } from "react-icons/md";
 import classNames from "classnames";
 import { productListDropdown } from "./datas/navBarDatas";
 
-import { useTanStackQuery } from "../../hooks/usequery/useTanStackQuery";
-import { fetchProductList } from "../../services/productList";
-import { useEffect } from "react";
-
 const NavBar = () => {
   const { toggleMenu, setToggleMenu } = useNavBarMenu();
 
