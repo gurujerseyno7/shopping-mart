@@ -4,10 +4,9 @@ import classNames from "classnames";
 import { AiOutlineSearch } from "react-icons/ai";
 import { RxCross2 } from "react-icons/rx";
 import type { PrimitiveTypes } from "../../types/basicTypes";
+import type { CustomSearchProps } from "./types/customSearchTypes";
 
-const options = ["Ragi", "Wheat", "Rice"];
-
-const CustomSearch = () => {
+const CustomSearch = ({ options }: CustomSearchProps) => {
   //hook for accessing custom search states
   const {
     isSelectOpened,
@@ -18,7 +17,7 @@ const CustomSearch = () => {
     setSelectedOption,
   } = useCustomSearchStates();
   return (
-    <div className="relative w-50 md:w-150 font-medium">
+    <div className="relative w-50 md:w-150 font-medium z-50 isolation-auto">
       <div
         className="bg-white w-full p-2 flex items-center justify-between border rounded-xl"
         onClick={() => {
@@ -43,10 +42,11 @@ const CustomSearch = () => {
           />
         )}
       </div>
+
       <ul
         className={`${classNames({
           "max-h-60 border border-primary rounded-xl": isSelectOpened,
-        })} absolute w-50 lg:w-150 text-left bg-white mt-2 overflow-y-auto max-h-0 `}
+        })} absolute w-50 md:w-150 text-left  mt-2 overflow-y-auto max-h-0 z-50 custom-scrollbar`}
       >
         <div className="flex items-center px-2 sticky top-0 bg-white border-b border-primary">
           <AiOutlineSearch size={18} color="black" />
@@ -63,9 +63,9 @@ const CustomSearch = () => {
           <li
             key={option}
             className={classNames({
-              "text-black": true,
-              "p-2 text-sm hover:bg-primary hover:text-white": true,
-              "bg-primary text-white": option === selectedOption,
+              "text-black p-2 text-sm": true,
+              " bg-white hover:bg-secondary! hover:text-white": true,
+              "bg-tertiary! text-black ": option === selectedOption,
               hidden: inputValue
                 ? !option?.toLowerCase().startsWith(inputValue!)
                 : false,

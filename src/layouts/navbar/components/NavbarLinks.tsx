@@ -1,11 +1,9 @@
 import { IoHomeOutline } from "react-icons/io5";
 import { BiCategory } from "react-icons/bi";
 import { IoMdContact } from "react-icons/io";
-import { FaShoppingCart } from "react-icons/fa";
 import type { NavBarLinkProps, NavBarLinkType } from "../types/NavBarTypes";
 import classNames from "classnames";
 import { useNavBarLinkAction } from "../hooks/useNavBarLinkAction";
-import { MdOutlineMenu } from "react-icons/md";
 
 const navBarLinks: NavBarLinkType[] = [
   { label: "Home", icon: <IoHomeOutline size={20} /> },
@@ -18,9 +16,9 @@ const NavBarLinks = ({ toggleMenu, setToggleMenu }: NavBarLinkProps) => {
 
   return (
     <div
-      className={`lg:flex-row  gap-5 ${classNames({
+      className={`flex flex-col lg:flex lg:flex-row  gap-5 ${classNames({
         hidden: !toggleMenu,
-        "flex flex-col gap-5": toggleMenu,
+        "sm:flex flex-col gap-5": toggleMenu,
       })}`}
     >
       {navBarLinks?.map(({ label, icon }: NavBarLinkType) => (
