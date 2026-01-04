@@ -28,7 +28,7 @@ const customerPolicyLinks = [
 ];
 const Footer = () => {
   return (
-    <div className="bg-secondary w-auto overflow-hidden max-h-auto ">
+    <div className="bg-primary w-auto overflow-hidden max-h-auto ">
       <div className="flex flex-col justify-evenly pl-4 pt-4 py-2">
         <div className="flex flex-col sm:flex-row gap-20 text-left ">
           <div className="flex flex-col gap-5">
